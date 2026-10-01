@@ -1,9 +1,14 @@
 # XTCRotateFix
 
-XTC ND08（monaco_go / `Z11_SN`，DXY_2.7.5.26.8.7，Android 11）**屏幕旋转解锁**项目。
+XTC **w5100** 平台手表（monaco_go，Android 11）**屏幕旋转解锁**项目。
+
+> **支持设备**：理论上支持所有 XTC **w5100** 平台设备；其中 **Z10、Z11 已实机测试通过**。
+> 其余 w5100 机型通常可直接使用；若某 ROM 把 `DisplayRotation` 的字段/方法改了名，
+> 按 [`lspmod/README.md`](lspmod/README.md) 的符号对照表微调即可。
+> 实机测试版本：`XTC/ND08/monaco_go:11/RKQ1.220916.001`（DXY_2.7.5.26.8.7）。
 
 厂商在 Wear 形态的 framework 层把屏幕旋转彻底关死（配置 + 代码双重阉割）。本项目用一个
-LSPosed 模块在运行时解除封锁，**不修改任何 ROM 文件**，实机已验证通过。
+LSPosed 模块在运行时解除封锁，**不修改任何 ROM 文件**。
 
 ## 目录
 

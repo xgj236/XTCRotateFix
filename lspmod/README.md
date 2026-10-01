@@ -1,12 +1,14 @@
-# XgjRotateFix —— XTC ND08 (Z11) 旋转解锁 LSPosed 模块
+# XgjRotateFix —— XTC w5100（Z10/Z11）旋转解锁 LSPosed 模块
 
-针对 `XTC/ND08/monaco_go:11/RKQ1.220916.001`（DXY_2.7.5.26.8.7，实机 `Z11_SN`），
+理论上支持所有 XTC **w5100** 平台手表；开发/实测基于
+`XTC/ND08/monaco_go:11/RKQ1.220916.001`（DXY_2.7.5.26.8.7，实机 `Z11_SN`），
 在运行时解除框架层的旋转封锁，**不修改任何 ROM 文件**。
 
 产物：`XTCRotateFix.apk`（**v1.1 / versionCode 1000**）
 作用域：**`android`（系统框架）** —— 旋转只需 hook system_server
 
-> 已在实机 Z11_SN 上验证通过：手动四个方向 + 自动旋转链路打通，无崩溃、无 ANR。
+> 已在实机 **Z10、Z11** 上验证通过：手动四个方向 + 自动旋转链路打通，无崩溃、无 ANR。
+> 其余 w5100 机型通常可直接使用；若 `DisplayRotation` 字段/方法改名，按文末符号对照表微调。
 >
 > SystemUI 侧因旋转生效而暴露的崩溃（`RotationPolicy.getNaturalRotation()` 缺失）
 > 已移交 **ReXTCsettings 模块的「修复 BV」**，本模块不再需要 systemui 作用域。
