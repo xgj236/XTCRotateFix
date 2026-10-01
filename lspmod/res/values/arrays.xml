@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- hook 作用域：只注入 system_server（系统框架）。
+         SystemUI 侧的旋转崩溃修复（RotationPolicy.getNaturalRotation 缺失）
+         已移交 ReXTCsettings 模块的「修复 BV」，本模块不再要 systemui 作用域。 -->
+    <string-array name="xposed_scope">
+        <item>android</item>
+    </string-array>
+</resources>

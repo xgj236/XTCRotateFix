@@ -1,0 +1,19 @@
+# 默认忽略仓库根目录下的全部内容，只上传 RotateFix 模块与文档
+/*
+
+# 需要上传的内容
+!/.gitignore
+!/*.md
+!/lspmod/
+
+# 模块内的构建中间产物不上传（保留最终签名好的 XgjRotateFix.apk）
+/lspmod/build/
+
+# 证书 / 密钥 / 密码（任何位置都不上传）
+*.pfx
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+password.txt
