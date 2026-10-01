@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 手工构建 XgjRotateFix.apk（无 Gradle）
+# 手工构建 XTCRotateFix.apk（无 Gradle）
 # aapt2 compile -> aapt2 link -> javac -> d8 -> aapt add classes.dex -> zipalign -> apksigner
 set -e
 
@@ -20,9 +20,9 @@ FLAT="$BUILD/flat"
 CLASSES="$BUILD/classes"
 GEN="$BUILD/gen"
 DEX="$BUILD/dex"
-UNSIGNED="$BUILD/XgjRotateFix-unsigned.apk"
-ALIGNED="$BUILD/XgjRotateFix-aligned.apk"
-SIGNED="$ROOT/XgjRotateFix.apk"
+UNSIGNED="$BUILD/XTCRotateFix-unsigned.apk"
+ALIGNED="$BUILD/XTCRotateFix-aligned.apk"
+SIGNED="$ROOT/XTCRotateFix.apk"
 
 rm -rf "$BUILD"
 mkdir -p "$FLAT" "$CLASSES" "$GEN" "$DEX"

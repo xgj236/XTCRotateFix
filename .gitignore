@@ -3,10 +3,11 @@
 
 # 需要上传的内容
 !/.gitignore
+!/LICENSE
 !/*.md
 !/lspmod/
 
-# 模块内的构建中间产物不上传（保留最终签名好的 XgjRotateFix.apk）
+# 模块内的构建中间产物不上传（保留最终签名好的 XTCRotateFix.apk）
 /lspmod/build/
 
 # 证书 / 密钥 / 密码（任何位置都不上传）

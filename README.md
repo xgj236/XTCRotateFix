@@ -9,14 +9,14 @@ LSPosed 模块在运行时解除封锁，**不修改任何 ROM 文件**，实机
 
 | 路径 | 说明 |
 |------|------|
-| [`lspmod/`](lspmod/) | **XgjRotateFix** LSPosed 模块：源码、构建脚本与签名好的 `XgjRotateFix.apk` |
+| [`lspmod/`](lspmod/) | **XgjRotateFix** LSPosed 模块：源码、构建脚本与签名好的 `XTCRotateFix.apk` |
 | [`lspmod/README.md`](lspmod/README.md) | 模块说明：根因（实测修正版）、各 hook 做了什么、安装/使用、实测结果 |
 | [`旋转失效-排查与修复方案.md`](旋转失效-排查与修复方案.md) | 纯静态分析排查报告：根因链、证据链、改 ROM / RRO overlay 的修复方案 |
 
 ## 快速开始
 
 ```bash
-adb install -r lspmod/XgjRotateFix.apk
+adb install -r lspmod/XTCRotateFix.apk
 ```
 
 在 LSPosed 管理器中启用「旋转修复」，作用域勾选 **系统框架 (android)**，重启。
@@ -25,7 +25,7 @@ adb install -r lspmod/XgjRotateFix.apk
 ## 构建
 
 ```bash
-cd lspmod && bash build.sh      # 产物 ./XgjRotateFix.apk
+cd lspmod && bash build.sh      # 产物 ./XTCRotateFix.apk
 ```
 
 依赖 Android SDK build-tools 与一份代码签名证书（LSPosed 模块不要求平台签名，用自己的证书即可）。
@@ -35,3 +35,7 @@ cd lspmod && bash build.sh      # 产物 ./XgjRotateFix.apk
 
 - 仅针对上述特定 ROM 版本；换 ROM 版本需按 `lspmod/README.md` 的符号对照表核对。
 - 刷机 / Xposed 有风险，请自行评估。本项目仅供学习与研究使用。
+
+## 许可
+
+本项目以 [MIT License](LICENSE) 开源。

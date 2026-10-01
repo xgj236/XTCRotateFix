@@ -3,7 +3,7 @@
 针对 `XTC/ND08/monaco_go:11/RKQ1.220916.001`（DXY_2.7.5.26.8.7，实机 `Z11_SN`），
 在运行时解除框架层的旋转封锁，**不修改任何 ROM 文件**。
 
-产物：`XgjRotateFix.apk`（**v1.1 / versionCode 1000**）
+产物：`XTCRotateFix.apk`（**v1.1 / versionCode 1000**）
 作用域：**`android`（系统框架）** —— 旋转只需 hook system_server
 
 > 已在实机 Z11_SN 上验证通过：手动四个方向 + 自动旋转链路打通，无崩溃、无 ANR。
@@ -243,7 +243,7 @@ AOSP 在手机上不踩这个坑，是因为按 HOME 后下层任务会被置为
 ## 三、安装与作用域
 
 ```bash
-adb install -r XgjRotateFix.apk
+adb install -r XTCRotateFix.apk
 ```
 
 LSPosed 管理器里：
@@ -380,7 +380,7 @@ lspmod/
 ```
 
 ```bash
-bash build.sh          # 产物 ./XgjRotateFix.apk
+bash build.sh          # 产物 ./XTCRotateFix.apk
 ```
 
 依赖：`C:\Android\Sdk\build-tools\35.0.0`、`platforms\android-34\android.jar`、
